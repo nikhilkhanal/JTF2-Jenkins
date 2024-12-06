@@ -37,7 +37,7 @@ pipeline {
         stage('SonarQube Analysis') {
             environment {
                 SONARQUBE_URL = 'http://10.0.0.37:9000'
-                SONAR_PROJECT_KEY = 'CobraFinalProject'
+                SONAR_PROJECT_KEY = 'JTF2'
                 SONAR_AUTH_TOKEN = credentials('jenkins-sonar') // Inject the SonarQube token
             }
             steps {
