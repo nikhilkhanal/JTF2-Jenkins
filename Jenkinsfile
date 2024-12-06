@@ -65,7 +65,7 @@ pipeline {
                 script {
                     // Start the ZAP scan using the API
                     bat """
-                        curl -X GET "http://10.0.0.166:8085/UI/ascan/action/scan/?apikey=${ZAP_API_KEY}&url=https://real-legal-drake.ngrok-free.app/&maxChildren=10"
+                        curl -X GET "http://10.0.0.166:8085/UI/ascan/action/scan/?apikey=${ZAP_API_KEY}&url=https://a86e-2607-fea8-4baf-6400-3cab-a433-365c-7f36.ngrok-free.app/&maxChildren=10"
                     """
                 }
             }
@@ -77,7 +77,7 @@ pipeline {
             steps {
                 script {
                     bat """
-                        curl -X GET "http://10.0.0.166:8085/UI/reports/action/generate/?apikey=${ZAP_API_KEY}&title=CobraFinalProjectReport&template=traditional-html&theme=&description=&contexts=&sites=https://real-legal-drake.ngrok-free.app/&sections=&includedConfidences=&includedRisks=&reportFileName=&reportFileNamePattern=&reportDir=&display="
+                        curl -X GET "http://10.0.0.166:8085/UI/reports/action/generate/?apikey=${ZAP_API_KEY}&title=JTF2Jenkins&template=traditional-html&theme=&description=&contexts=&sites=https://a86e-2607-fea8-4baf-6400-3cab-a433-365c-7f36.ngrok-free.app/&sections=&includedConfidences=&includedRisks=&reportFileName=&reportFileNamePattern=&reportDir=&display="
                     """
                 }
             }
