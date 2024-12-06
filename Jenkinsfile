@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         PATH = "${PATH};C:\\Users\\Anubhav\\Downloads\\sonar-scanner-cli-6.2.1.4610-windows-x64\\sonar-scanner-6.2.1.4610-windows-x64\\bin;C:\\Users\\Anubhav\\Downloads\\ZAP_WEEKLY_D-2024-12-02\\ZAP_D-2024-12-02;C:\\Users\\Anubhav\\Downloads\\terraform_1.10.1_windows_amd64"
-        ZAP_HOME = 'C:\\Users\\Anubhav\\Downloads\\ZAP_WEEKLY_D-2024-12-02\\ZAP_D-2024-12-02'
-        TERRAFORM_HOME = 'C:\\Users\\Anubhav\\Downloads\\terraform_1.10.1_windows_amd64'
+        ZAP_HOME = 'C:\\Users\\Nikhil\\Downloads\\ZAP_WEEKLY_D-2024-12-02\\ZAP_D-2024-12-02'
+        TERRAFORM_HOME = 'C:\\Users\\Nikhil\\Downloads\\terraform_1.10.1_windows_amd64'
     }
     triggers {
         githubPush() // Triggers the pipeline on a GitHub push event
@@ -21,15 +21,15 @@ pipeline {
                 script {
                     // Initialize Terraform configuration
                     bat """
-                        C:\\Users\\Anubhav\\Downloads\\terraform_1.10.1_windows_amd64\\terraform.exe init -input=false
+                        C:\\Users\\Nikhil\\Downloads\\terraform_1.10.1_windows_amd64\\terraform.exe init -input=false
                     """
                     // Validate Terraform configuration
                     bat """
-                        C:\\Users\\Anubhav\\Downloads\\terraform_1.10.1_windows_amd64\\terraform.exe validate
+                        C:\\Users\\Nikhil\\Downloads\\terraform_1.10.1_windows_amd64\\terraform.exe validate
                     """
                     // Apply the Terraform configuration to create the VM
                     bat """
-                        C:\\Users\\Anubhav\\Downloads\\terraform_1.10.1_windows_amd64\\terraform.exe apply -auto-approve -input=false
+                        C:\\Users\\Nikhil\\Downloads\\terraform_1.10.1_windows_amd64\\terraform.exe apply -auto-approve -input=false
                     """
                 }
             }
