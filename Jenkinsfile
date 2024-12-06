@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    git credentialsId: 'githubtoken', url: 'https://github.com/nikhilkhanal/JTF2-Jenkins.git', branch: 'main'
+                    git credentialsId: 'tokengithub', url: 'https://github.com/nikhilkhanal/JTF2-Jenkins.git', branch: 'main'
                 }
             }
         }
