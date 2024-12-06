@@ -21,7 +21,7 @@ pipeline {
                 script {
                     // Initialize Terraform configuration
                     bat """
-                        D:\\Users\\Anubhav\\Downloads\\terraform_1.10.1_windows_amd64\\terraform.exe init -input=false
+                        C:\\Users\\Anubhav\\Downloads\\terraform_1.10.1_windows_amd64\\terraform.exe init -input=false
                     """
                     // Validate Terraform configuration
                     bat """
